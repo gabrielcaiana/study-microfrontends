@@ -54,7 +54,7 @@ export default function BasicTabs() {
         singleSpa.navigateToUrl('/app1');
         break;
       case 2:
-        singleSpa.navigateToUrl('/bananinha');
+        singleSpa.navigateToUrl('/app2');
         break;
       default:
         break;
@@ -69,20 +69,14 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="App 1" {...a11yProps(0)} />
-          <Tab label="App 2" {...a11yProps(1)} />
-          <Tab label="App 3" {...a11yProps(2)} />
+          <Tab label="ROOT" {...a11yProps(0)} />
+          <Tab label="App 1" {...a11yProps(1)} />
+          <Tab label="App 2" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+      <TabPanel value={value} index={0}></TabPanel>
+      <TabPanel value={value} index={1}></TabPanel>
+      <TabPanel value={value} index={2}></TabPanel>
     </Box>
   );
 }
